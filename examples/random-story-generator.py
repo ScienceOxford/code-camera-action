@@ -16,11 +16,11 @@ def roll():
     style = choice(styles)
     story = [character, location, style]
     print('rolled')
+    print("This story is about " + story[0] + " in " + story[1] + ".")
+    print("It is " + story[2] + " story.")
+    print()
     message.value = "This story is about " + story[0] + " in " + story[1] + "." + "\n" + "It is " + story[2] + " story."
     return story
-
-print("This story is about " + story[0] + " in " + story[1] + ".")
-print("It is " + story[2] + " story.")
 
 message = Text(app, text="This story is about " + story[0] + " in " + story[1] + "." + "\n" + "It is " + story[2] + " story.", size=24)
 reroll = PushButton(app, text="Re-roll!", command=roll)
